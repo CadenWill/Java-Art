@@ -47,6 +47,9 @@ public class ImageGenerator {
         drawRect(50, 100, 300, 100, WHITE);
         drawRect(100, 250, 200, 150, GREEN);
         drawRect(700, 20, 50, 300, LIGHT_RED);
+        drawCircle(300, 300, 100, BLUE, BLACK);
+        drawCircle(500, 350, 150, RED, SILVER);
+        drawCircle(300, 50, 200, BLACK, BLACK);
     }
 
     private void drawRect(int left, int top, int width, int height, Color color) {
@@ -63,7 +66,7 @@ public class ImageGenerator {
         for (int row = centerY - radius; row <= centerY + radius; row++) {
             for (int col = centerX - radius; col <= centerX + radius; col++) {
                 if ((col - centerX) * (col - centerX) + (row - centerY) * (row - centerY) <= radius * radius) {
-                    if(row > 0 && row <= HEIGHT && col > 0 && col <= WIDTH){
+                    if(row > 0 && row < HEIGHT && col > 0 && col < WIDTH){
                         image[row][col] = color; // Simplified for uniform color
                     }
                 }
