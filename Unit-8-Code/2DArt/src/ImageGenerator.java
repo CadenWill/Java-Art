@@ -43,7 +43,10 @@ public class ImageGenerator {
             int randomYPosition = rand.nextInt(HEIGHT);
             drawCircle(randomXPosition, randomYPosition, 1, WHITE, WHITE);
         }
+        
         drawRect(50, 100, 300, 100, WHITE);
+        drawRect(100, 250, 200, 150, GREEN);
+        drawRect(700, 20, 50, 300, LIGHT_RED);
     }
 
     private void drawRect(int left, int top, int width, int height, Color color) {
